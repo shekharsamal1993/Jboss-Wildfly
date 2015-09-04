@@ -1,22 +1,12 @@
 version: 0.0
-
 os: linux
-
-hooks:
-
 files:
-   - source: /
-     destination: /var/www
-
-BeforeInstall:
-
-   - location: codeDeployFolder/stopServer.sh
-
-     runas: root
-
-
-AfterInstall:
-
-   - location: codeDeployFolder/startServer.sh
-
-     runas: root
+   - source: /target/jboss-helloworld.war
+     destination: /home/ubuntu/wildfly-9.0.1.Final/standalone/deployments
+hooks:
+  BeforeInstall:
+    - location: codeDeployFolder/stopServer.sh
+      runas: root
+  AfterInstall:
+    - location: codeDeployFolder/startServer.sh
+      runas: root
