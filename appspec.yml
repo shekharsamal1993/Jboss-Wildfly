@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
    - source: /target/jboss-helloworld.war
-     destination: /home/ubuntu/wildfly-9.0.1.Final/standalone/deployments
+     destination: /opt/wildfly/standalone/deployments
 hooks:
   BeforeInstall:
     - location: codeDeployFolder/stopServer.sh
