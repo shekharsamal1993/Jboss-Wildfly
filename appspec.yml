@@ -5,8 +5,8 @@ files:
      destination: /opt/wildfly/standalone/deployments
 hooks:
   BeforeInstall:
-    - location: codeDeployFolder/stopServer.sh
+    - location: scripts/stopServer.sh
       runas: root
   AfterInstall:
-    - location: codeDeployFolder/startServer.sh
+    - location: scripts/startServer.sh
       runas: root
