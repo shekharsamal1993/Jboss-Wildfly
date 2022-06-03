@@ -27,5 +27,7 @@ public class HelloService {
     String createHelloMessage(String name) {
         return "Hello " + name + "!";
     }
-
+    String welcomemessage(String name) {
+        return "Welcome To Medsys Bhuabaneswar " + name + "!";
+    }
 }
